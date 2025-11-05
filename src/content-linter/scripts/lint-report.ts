@@ -5,39 +5,40 @@ import coreLib from '@actions/core'
 import github from '@/workflows/github'
 import { getEnvInputs } from '@/workflows/get-env-inputs'
 import { createReportIssue, linkReports } from '@/workflows/issue-report'
-import { reportingConfig } from '@/content-linter/style/github-docs'
+import { getAllRuleNames } from '@/content-linter/lib/helpers/rule-utils'
 
 // GitHub issue body size limit is ~65k characters, so we'll use 60k as a safe limit
 const MAX_ISSUE_BODY_SIZE = 60000
 
+/**
+ * Config that only applies to automated weekly reports.
+ */
+export const reportingConfig = {
+  // Include only rules with these severities in reports
+  includeSeverities: ['error'],
+  // Include these rules regardless of severity in reports
+  includeRules: ['expired-content'],
+}
+
 interface LintFlaw {
   severity: string
   ruleNames: string[]
+  errorDetail?: string
 }
 
 /**
  * Determines if a lint result should be included in the automated report
  */
 function shouldIncludeInReport(flaw: LintFlaw): boolean {
-  if (!flaw.ruleNames || !Array.isArray(flaw.ruleNames)) {
-    return false
-  }
-
-  // Check if any rule name is in the exclude list
-  const hasExcludedRule = flaw.ruleNames.some((ruleName: string) =>
-    reportingConfig.excludeRules.includes(ruleName),
-  )
-  if (hasExcludedRule) {
-    return false
-  }
+  const allRuleNames = getAllRuleNames(flaw)
 
   // Check if severity should be included
   if (reportingConfig.includeSeverities.includes(flaw.severity)) {
     return true
   }
 
-  // Check if any rule name is in the include list
-  const hasIncludedRule = flaw.ruleNames.some((ruleName: string) =>
+  // Check if any rule name is in the include list that overrides severity
+  const hasIncludedRule = allRuleNames.some((ruleName: string) =>
     reportingConfig.includeRules.includes(ruleName),
   )
   if (hasIncludedRule) {
@@ -91,7 +92,7 @@ async function main() {
   // Filter results based on reporting configuration
   const filteredResults: Record<string, LintFlaw[]> = {}
   for (const [file, flaws] of Object.entries(parsedResults)) {
-    const filteredFlaws = (flaws as LintFlaw[]).filter(shouldIncludeInReport)
+    const filteredFlaws = (flaws as LintFlaw[]).filter((flaw) => shouldIncludeInReport(flaw))
 
     // Only include files that have remaining flaws after filtering
     if (filteredFlaws.length > 0) {
@@ -132,12 +133,12 @@ async function main() {
     reportLabel: REPORT_LABEL!,
   }
 
-  await createReportIssue(reportProps)
+  const newReport = await createReportIssue(reportProps)
 
   const linkProps = {
     core,
     octokit,
-    newReport: await createReportIssue(reportProps),
+    newReport,
     reportRepository: REPORT_REPOSITORY!,
     reportAuthor: REPORT_AUTHOR!,
     reportLabel: REPORT_LABEL!,

@@ -3237,6 +3237,13 @@
         },
         {
           "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
           "name": "organization",
           "in": "body",
           "description": "<p>A GitHub organization. Webhook payloads contain the <code>organization</code> property when the webhook is configured for an\norganization, or when the event occurs from activity in a repository owned by an organization.</p>",
@@ -5348,6 +5355,13 @@
           "name": "installation",
           "in": "body",
           "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
           "childParamsGroups": []
         },
         {
@@ -7464,6 +7478,13 @@
           "name": "installation",
           "in": "body",
           "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
           "childParamsGroups": []
         },
         {
@@ -9592,6 +9613,13 @@
           "name": "installation",
           "in": "body",
           "description": "<p>The GitHub App installation. Webhook payloads contain the <code>installation</code> property when the event is configured\nfor and sent to a GitHub App. For more information,\nsee \"<a href=\"https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps\">Using webhooks with GitHub Apps</a>.\"</p>",
+          "childParamsGroups": []
+        },
+        {
+          "type": "object",
+          "name": "enterprise",
+          "in": "body",
+          "description": "<p>An enterprise on GitHub. Webhook payloads contain the <code>enterprise</code> property when the webhook is configured\non an enterprise account or an organization that's part of an enterprise account. For more information,\nsee \"<a href=\"https://docs.github.com/admin/overview/about-enterprise-accounts\">About enterprise accounts</a>.\"</p>",
           "childParamsGroups": []
         },
         {
@@ -12372,6 +12400,141 @@
           "isRequired": true,
           "childParamsGroups": [
             {
+              "type": "array of objects",
+              "name": "assignees",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            },
+            {
               "type": "string",
               "name": "created_at",
               "description": "<p>The time that the alert was created in ISO 8601 format: <code>YYYY-MM-DDTHH:MM:SSZ.</code></p>",
@@ -12792,6 +12955,141 @@
           "description": "<p>The code scanning alert involved in the event.</p>",
           "isRequired": true,
           "childParamsGroups": [
+            {
+              "type": "array of objects",
+              "name": "assignees",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            },
             {
               "type": "string",
               "name": "created_at",
@@ -13620,6 +13918,141 @@
               "type": "null",
               "name": "dismissal_approved_by",
               "description": ""
+            },
+            {
+              "type": "array of objects",
+              "name": "assignees",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
             }
           ]
         },
@@ -13705,6 +14138,141 @@
           "description": "<p>The code scanning alert involved in the event.</p>",
           "isRequired": true,
           "childParamsGroups": [
+            {
+              "type": "array of objects",
+              "name": "assignees",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            },
             {
               "type": "string",
               "name": "created_at",
@@ -14160,6 +14728,141 @@
           "isRequired": true,
           "childParamsGroups": [
             {
+              "type": "array of objects",
+              "name": "assignees",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            },
+            {
               "type": "string",
               "name": "created_at",
               "description": "<p>The time that the alert was created in ISO 8601 format: <code>YYYY-MM-DDTHH:MM:SSZ.</code></p>",
@@ -14485,6 +15188,141 @@
           "description": "<p>The code scanning alert involved in the event.</p>",
           "isRequired": true,
           "childParamsGroups": [
+            {
+              "type": "array of objects",
+              "name": "assignees",
+              "description": "",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
+            },
             {
               "type": "string",
               "name": "created_at",
@@ -23864,6 +24702,26 @@
                   "type": "string",
                   "name": "ldap_dn",
                   "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -55835,7 +56693,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -55938,6 +56795,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -57884,7 +58746,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -57987,6 +58848,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -60794,7 +61660,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -60897,6 +61762,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -62843,7 +63713,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -62946,6 +63815,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -65753,7 +66627,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -65856,6 +66729,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -68608,7 +69486,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -68711,6 +69588,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -70712,7 +71594,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -70815,6 +71696,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -73567,7 +74453,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -73670,6 +74555,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -109252,6 +110142,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -109293,6 +110203,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
@@ -109623,6 +110552,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -109664,6 +110613,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
@@ -120557,13 +121525,13 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the project.</p>",
               "isRequired": true
             },
             {
@@ -120841,55 +121809,55 @@
             {
               "type": "string",
               "name": "title",
-              "description": "",
+              "description": "<p>The project title.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "description",
-              "description": "",
+              "description": "<p>A short description of the project.</p>",
               "isRequired": true
             },
             {
               "type": "boolean",
               "name": "public",
-              "description": "",
+              "description": "<p>Whether the project is visible to anyone with access to the owner.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "closed_at",
-              "description": "",
+              "description": "<p>The time when the project was closed.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the project was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the project was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "integer",
               "name": "number",
-              "description": "",
+              "description": "<p>The project number.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "short_description",
-              "description": "",
+              "description": "<p>A concise summary of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "deleted_at",
-              "description": "",
+              "description": "<p>The time when the project was deleted.</p>",
               "isRequired": true
             },
             {
@@ -121031,7 +121999,7 @@
             {
               "type": "string",
               "name": "state",
-              "description": "",
+              "description": "<p>The current state of the project.</p>",
               "enum": [
                 "open",
                 "closed"
@@ -121045,19 +122013,19 @@
                 {
                   "type": "number",
                   "name": "id",
-                  "description": "",
+                  "description": "<p>The unique identifier of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "node_id",
-                  "description": "",
+                  "description": "<p>The node ID of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "project_node_id",
-                  "description": ""
+                  "description": "<p>The node ID of the project that this status update belongs to.</p>"
                 },
                 {
                   "type": "object",
@@ -121197,19 +122165,19 @@
                 {
                   "type": "string",
                   "name": "created_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was created.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "updated_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was last updated.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string or null",
                   "name": "status",
-                  "description": "",
+                  "description": "<p>The current status.</p>",
                   "enum": [
                     "INACTIVE",
                     "ON_TRACK",
@@ -121222,12 +122190,12 @@
                 {
                   "type": "string",
                   "name": "start_date",
-                  "description": ""
+                  "description": "<p>The start date of the period covered by the update.</p>"
                 },
                 {
                   "type": "string",
                   "name": "target_date",
-                  "description": ""
+                  "description": "<p>The target date associated with the update.</p>"
                 },
                 {
                   "type": "string or null",
@@ -121298,13 +122266,13 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the project.</p>",
               "isRequired": true
             },
             {
@@ -121582,55 +122550,55 @@
             {
               "type": "string",
               "name": "title",
-              "description": "",
+              "description": "<p>The project title.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "description",
-              "description": "",
+              "description": "<p>A short description of the project.</p>",
               "isRequired": true
             },
             {
               "type": "boolean",
               "name": "public",
-              "description": "",
+              "description": "<p>Whether the project is visible to anyone with access to the owner.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "closed_at",
-              "description": "",
+              "description": "<p>The time when the project was closed.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the project was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the project was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "integer",
               "name": "number",
-              "description": "",
+              "description": "<p>The project number.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "short_description",
-              "description": "",
+              "description": "<p>A concise summary of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "deleted_at",
-              "description": "",
+              "description": "<p>The time when the project was deleted.</p>",
               "isRequired": true
             },
             {
@@ -121772,7 +122740,7 @@
             {
               "type": "string",
               "name": "state",
-              "description": "",
+              "description": "<p>The current state of the project.</p>",
               "enum": [
                 "open",
                 "closed"
@@ -121786,19 +122754,19 @@
                 {
                   "type": "number",
                   "name": "id",
-                  "description": "",
+                  "description": "<p>The unique identifier of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "node_id",
-                  "description": "",
+                  "description": "<p>The node ID of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "project_node_id",
-                  "description": ""
+                  "description": "<p>The node ID of the project that this status update belongs to.</p>"
                 },
                 {
                   "type": "object",
@@ -121938,19 +122906,19 @@
                 {
                   "type": "string",
                   "name": "created_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was created.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "updated_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was last updated.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string or null",
                   "name": "status",
-                  "description": "",
+                  "description": "<p>The current status.</p>",
                   "enum": [
                     "INACTIVE",
                     "ON_TRACK",
@@ -121963,12 +122931,12 @@
                 {
                   "type": "string",
                   "name": "start_date",
-                  "description": ""
+                  "description": "<p>The start date of the period covered by the update.</p>"
                 },
                 {
                   "type": "string",
                   "name": "target_date",
-                  "description": ""
+                  "description": "<p>The target date associated with the update.</p>"
                 },
                 {
                   "type": "string or null",
@@ -122039,13 +123007,13 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the project.</p>",
               "isRequired": true
             },
             {
@@ -122323,55 +123291,55 @@
             {
               "type": "string",
               "name": "title",
-              "description": "",
+              "description": "<p>The project title.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "description",
-              "description": "",
+              "description": "<p>A short description of the project.</p>",
               "isRequired": true
             },
             {
               "type": "boolean",
               "name": "public",
-              "description": "",
+              "description": "<p>Whether the project is visible to anyone with access to the owner.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "closed_at",
-              "description": "",
+              "description": "<p>The time when the project was closed.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the project was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the project was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "integer",
               "name": "number",
-              "description": "",
+              "description": "<p>The project number.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "short_description",
-              "description": "",
+              "description": "<p>A concise summary of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "deleted_at",
-              "description": "",
+              "description": "<p>The time when the project was deleted.</p>",
               "isRequired": true
             },
             {
@@ -122513,7 +123481,7 @@
             {
               "type": "string",
               "name": "state",
-              "description": "",
+              "description": "<p>The current state of the project.</p>",
               "enum": [
                 "open",
                 "closed"
@@ -122527,19 +123495,19 @@
                 {
                   "type": "number",
                   "name": "id",
-                  "description": "",
+                  "description": "<p>The unique identifier of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "node_id",
-                  "description": "",
+                  "description": "<p>The node ID of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "project_node_id",
-                  "description": ""
+                  "description": "<p>The node ID of the project that this status update belongs to.</p>"
                 },
                 {
                   "type": "object",
@@ -122679,19 +123647,19 @@
                 {
                   "type": "string",
                   "name": "created_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was created.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "updated_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was last updated.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string or null",
                   "name": "status",
-                  "description": "",
+                  "description": "<p>The current status.</p>",
                   "enum": [
                     "INACTIVE",
                     "ON_TRACK",
@@ -122704,12 +123672,12 @@
                 {
                   "type": "string",
                   "name": "start_date",
-                  "description": ""
+                  "description": "<p>The start date of the period covered by the update.</p>"
                 },
                 {
                   "type": "string",
                   "name": "target_date",
-                  "description": ""
+                  "description": "<p>The target date associated with the update.</p>"
                 },
                 {
                   "type": "string or null",
@@ -122857,13 +123825,13 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the project.</p>",
               "isRequired": true
             },
             {
@@ -123141,55 +124109,55 @@
             {
               "type": "string",
               "name": "title",
-              "description": "",
+              "description": "<p>The project title.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "description",
-              "description": "",
+              "description": "<p>A short description of the project.</p>",
               "isRequired": true
             },
             {
               "type": "boolean",
               "name": "public",
-              "description": "",
+              "description": "<p>Whether the project is visible to anyone with access to the owner.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "closed_at",
-              "description": "",
+              "description": "<p>The time when the project was closed.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the project was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the project was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "integer",
               "name": "number",
-              "description": "",
+              "description": "<p>The project number.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "short_description",
-              "description": "",
+              "description": "<p>A concise summary of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "deleted_at",
-              "description": "",
+              "description": "<p>The time when the project was deleted.</p>",
               "isRequired": true
             },
             {
@@ -123331,7 +124299,7 @@
             {
               "type": "string",
               "name": "state",
-              "description": "",
+              "description": "<p>The current state of the project.</p>",
               "enum": [
                 "open",
                 "closed"
@@ -123345,19 +124313,19 @@
                 {
                   "type": "number",
                   "name": "id",
-                  "description": "",
+                  "description": "<p>The unique identifier of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "node_id",
-                  "description": "",
+                  "description": "<p>The node ID of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "project_node_id",
-                  "description": ""
+                  "description": "<p>The node ID of the project that this status update belongs to.</p>"
                 },
                 {
                   "type": "object",
@@ -123497,19 +124465,19 @@
                 {
                   "type": "string",
                   "name": "created_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was created.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "updated_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was last updated.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string or null",
                   "name": "status",
-                  "description": "",
+                  "description": "<p>The current status.</p>",
                   "enum": [
                     "INACTIVE",
                     "ON_TRACK",
@@ -123522,12 +124490,12 @@
                 {
                   "type": "string",
                   "name": "start_date",
-                  "description": ""
+                  "description": "<p>The start date of the period covered by the update.</p>"
                 },
                 {
                   "type": "string",
                   "name": "target_date",
-                  "description": ""
+                  "description": "<p>The target date associated with the update.</p>"
                 },
                 {
                   "type": "string or null",
@@ -123598,13 +124566,13 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the project.</p>",
               "isRequired": true
             },
             {
@@ -123882,55 +124850,55 @@
             {
               "type": "string",
               "name": "title",
-              "description": "",
+              "description": "<p>The project title.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "description",
-              "description": "",
+              "description": "<p>A short description of the project.</p>",
               "isRequired": true
             },
             {
               "type": "boolean",
               "name": "public",
-              "description": "",
+              "description": "<p>Whether the project is visible to anyone with access to the owner.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "closed_at",
-              "description": "",
+              "description": "<p>The time when the project was closed.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the project was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the project was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "integer",
               "name": "number",
-              "description": "",
+              "description": "<p>The project number.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "short_description",
-              "description": "",
+              "description": "<p>A concise summary of the project.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "deleted_at",
-              "description": "",
+              "description": "<p>The time when the project was deleted.</p>",
               "isRequired": true
             },
             {
@@ -124072,7 +125040,7 @@
             {
               "type": "string",
               "name": "state",
-              "description": "",
+              "description": "<p>The current state of the project.</p>",
               "enum": [
                 "open",
                 "closed"
@@ -124086,19 +125054,19 @@
                 {
                   "type": "number",
                   "name": "id",
-                  "description": "",
+                  "description": "<p>The unique identifier of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "node_id",
-                  "description": "",
+                  "description": "<p>The node ID of the status update.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "project_node_id",
-                  "description": ""
+                  "description": "<p>The node ID of the project that this status update belongs to.</p>"
                 },
                 {
                   "type": "object",
@@ -124238,19 +125206,19 @@
                 {
                   "type": "string",
                   "name": "created_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was created.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string",
                   "name": "updated_at",
-                  "description": "",
+                  "description": "<p>The time when the status update was last updated.</p>",
                   "isRequired": true
                 },
                 {
                   "type": "string or null",
                   "name": "status",
-                  "description": "",
+                  "description": "<p>The current status.</p>",
                   "enum": [
                     "INACTIVE",
                     "ON_TRACK",
@@ -124263,12 +125231,12 @@
                 {
                   "type": "string",
                   "name": "start_date",
-                  "description": ""
+                  "description": "<p>The start date of the period covered by the update.</p>"
                 },
                 {
                   "type": "string",
                   "name": "target_date",
-                  "description": ""
+                  "description": "<p>The target date associated with the update.</p>"
                 },
                 {
                   "type": "string or null",
@@ -124367,23 +125335,23 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project item.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": ""
+              "description": "<p>The node ID of the project item.</p>"
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that contains this item.</p>"
             },
             {
               "type": "string",
               "name": "content_node_id",
-              "description": "",
+              "description": "<p>The node ID of the content represented by this item.</p>",
               "isRequired": true
             },
             {
@@ -124535,19 +125503,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the item was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the item was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "archived_at",
-              "description": "",
+              "description": "<p>The time when the item was archived.</p>",
               "isRequired": true
             }
           ]
@@ -124633,23 +125601,23 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project item.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": ""
+              "description": "<p>The node ID of the project item.</p>"
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that contains this item.</p>"
             },
             {
               "type": "string",
               "name": "content_node_id",
-              "description": "",
+              "description": "<p>The node ID of the content represented by this item.</p>",
               "isRequired": true
             },
             {
@@ -124801,19 +125769,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the item was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the item was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "archived_at",
-              "description": "",
+              "description": "<p>The time when the item was archived.</p>",
               "isRequired": true
             }
           ]
@@ -124873,23 +125841,23 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project item.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": ""
+              "description": "<p>The node ID of the project item.</p>"
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that contains this item.</p>"
             },
             {
               "type": "string",
               "name": "content_node_id",
-              "description": "",
+              "description": "<p>The node ID of the content represented by this item.</p>",
               "isRequired": true
             },
             {
@@ -125041,19 +126009,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the item was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the item was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "archived_at",
-              "description": "",
+              "description": "<p>The time when the item was archived.</p>",
               "isRequired": true
             }
           ]
@@ -125113,23 +126081,23 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project item.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": ""
+              "description": "<p>The node ID of the project item.</p>"
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that contains this item.</p>"
             },
             {
               "type": "string",
               "name": "content_node_id",
-              "description": "",
+              "description": "<p>The node ID of the content represented by this item.</p>",
               "isRequired": true
             },
             {
@@ -125281,19 +126249,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the item was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the item was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "archived_at",
-              "description": "",
+              "description": "<p>The time when the item was archived.</p>",
               "isRequired": true
             }
           ]
@@ -125436,23 +126404,23 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project item.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": ""
+              "description": "<p>The node ID of the project item.</p>"
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that contains this item.</p>"
             },
             {
               "type": "string",
               "name": "content_node_id",
-              "description": "",
+              "description": "<p>The node ID of the content represented by this item.</p>",
               "isRequired": true
             },
             {
@@ -125604,19 +126572,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the item was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the item was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "archived_at",
-              "description": "",
+              "description": "<p>The time when the item was archived.</p>",
               "isRequired": true
             }
           ]
@@ -125702,23 +126670,23 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project item.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": ""
+              "description": "<p>The node ID of the project item.</p>"
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that contains this item.</p>"
             },
             {
               "type": "string",
               "name": "content_node_id",
-              "description": "",
+              "description": "<p>The node ID of the content represented by this item.</p>",
               "isRequired": true
             },
             {
@@ -125870,19 +126838,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the item was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the item was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "archived_at",
-              "description": "",
+              "description": "<p>The time when the item was archived.</p>",
               "isRequired": true
             }
           ]
@@ -125968,23 +126936,23 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the project item.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": ""
+              "description": "<p>The node ID of the project item.</p>"
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that contains this item.</p>"
             },
             {
               "type": "string",
               "name": "content_node_id",
-              "description": "",
+              "description": "<p>The node ID of the content represented by this item.</p>",
               "isRequired": true
             },
             {
@@ -126136,19 +127104,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the item was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the item was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "archived_at",
-              "description": "",
+              "description": "<p>The time when the item was archived.</p>",
               "isRequired": true
             }
           ]
@@ -126210,19 +127178,19 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the status update.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the status update.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that this status update belongs to.</p>"
             },
             {
               "type": "object",
@@ -126362,19 +127330,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the status update was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the status update was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "status",
-              "description": "",
+              "description": "<p>The current status.</p>",
               "enum": [
                 "INACTIVE",
                 "ON_TRACK",
@@ -126387,12 +127355,12 @@
             {
               "type": "string",
               "name": "start_date",
-              "description": ""
+              "description": "<p>The start date of the period covered by the update.</p>"
             },
             {
               "type": "string",
               "name": "target_date",
-              "description": ""
+              "description": "<p>The target date associated with the update.</p>"
             },
             {
               "type": "string or null",
@@ -126456,19 +127424,19 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the status update.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the status update.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that this status update belongs to.</p>"
             },
             {
               "type": "object",
@@ -126608,19 +127576,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the status update was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the status update was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "status",
-              "description": "",
+              "description": "<p>The current status.</p>",
               "enum": [
                 "INACTIVE",
                 "ON_TRACK",
@@ -126633,12 +127601,12 @@
             {
               "type": "string",
               "name": "start_date",
-              "description": ""
+              "description": "<p>The start date of the period covered by the update.</p>"
             },
             {
               "type": "string",
               "name": "target_date",
-              "description": ""
+              "description": "<p>The target date associated with the update.</p>"
             },
             {
               "type": "string or null",
@@ -126794,19 +127762,19 @@
             {
               "type": "number",
               "name": "id",
-              "description": "",
+              "description": "<p>The unique identifier of the status update.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "node_id",
-              "description": "",
+              "description": "<p>The node ID of the status update.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "project_node_id",
-              "description": ""
+              "description": "<p>The node ID of the project that this status update belongs to.</p>"
             },
             {
               "type": "object",
@@ -126946,19 +127914,19 @@
             {
               "type": "string",
               "name": "created_at",
-              "description": "",
+              "description": "<p>The time when the status update was created.</p>",
               "isRequired": true
             },
             {
               "type": "string",
               "name": "updated_at",
-              "description": "",
+              "description": "<p>The time when the status update was last updated.</p>",
               "isRequired": true
             },
             {
               "type": "string or null",
               "name": "status",
-              "description": "",
+              "description": "<p>The current status.</p>",
               "enum": [
                 "INACTIVE",
                 "ON_TRACK",
@@ -126971,12 +127939,12 @@
             {
               "type": "string",
               "name": "start_date",
-              "description": ""
+              "description": "<p>The start date of the period covered by the update.</p>"
             },
             {
               "type": "string",
               "name": "target_date",
-              "description": ""
+              "description": "<p>The target date associated with the update.</p>"
             },
             {
               "type": "string or null",
@@ -138065,6 +139033,26 @@
                   "type": "string",
                   "name": "ldap_dn",
                   "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -141700,6 +142688,26 @@
                   "type": "string",
                   "name": "ldap_dn",
                   "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -152173,6 +153181,26 @@
                   "type": "string",
                   "name": "ldap_dn",
                   "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -169120,6 +170148,26 @@
                   "type": "string",
                   "name": "ldap_dn",
                   "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -172755,6 +173803,26 @@
                   "type": "string",
                   "name": "ldap_dn",
                   "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -176390,6 +177458,26 @@
                   "type": "string",
                   "name": "ldap_dn",
                   "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -232029,6 +233117,26 @@
                   "isRequired": true
                 },
                 {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
+                },
+                {
                   "type": "object",
                   "name": "parent",
                   "description": "<p>Groups of organization members that gives permissions on specified repositories.</p>",
@@ -232108,6 +233216,26 @@
                       "type": "string",
                       "name": "ldap_dn",
                       "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                    },
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "<p>The ownership type of the team</p>",
+                      "isRequired": true,
+                      "enum": [
+                        "enterprise",
+                        "organization"
+                      ]
+                    },
+                    {
+                      "type": "integer",
+                      "name": "organization_id",
+                      "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                    },
+                    {
+                      "type": "integer",
+                      "name": "enterprise_id",
+                      "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                     }
                   ]
                 }
@@ -233603,6 +234731,26 @@
                   "isRequired": true
                 },
                 {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
+                },
+                {
                   "type": "object",
                   "name": "parent",
                   "description": "<p>Groups of organization members that gives permissions on specified repositories.</p>",
@@ -233682,6 +234830,26 @@
                       "type": "string",
                       "name": "ldap_dn",
                       "description": "<p>Distinguished Name (DN) that team maps to within LDAP environment</p>"
+                    },
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "<p>The ownership type of the team</p>",
+                      "isRequired": true,
+                      "enum": [
+                        "enterprise",
+                        "organization"
+                      ]
+                    },
+                    {
+                      "type": "integer",
+                      "name": "organization_id",
+                      "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                    },
+                    {
+                      "type": "integer",
+                      "name": "enterprise_id",
+                      "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                     }
                   ]
                 }
@@ -235267,10 +236435,11 @@
                 {
                   "type": "string",
                   "name": "bypass_mode",
-                  "description": "<p>When the specified actor can bypass the ruleset. <code>pull_request</code> means that an actor can only bypass rules on pull requests. <code>pull_request</code> is not applicable for the <code>DeployKey</code> actor type. Also, <code>pull_request</code> is only applicable to branch rulesets.</p>",
+                  "description": "<p>When the specified actor can bypass the ruleset. <code>pull_request</code> means that an actor can only bypass rules on pull requests. <code>pull_request</code> is not applicable for the <code>DeployKey</code> actor type. Also, <code>pull_request</code> is only applicable to branch rulesets. When <code>bypass_mode</code> is <code>exempt</code>, rules will not be run for that actor and a bypass audit entry will not be created.</p>",
                   "enum": [
                     "always",
-                    "pull_request"
+                    "pull_request",
+                    "exempt"
                   ],
                   "default": "always"
                 }
@@ -235283,7 +236452,8 @@
               "enum": [
                 "always",
                 "pull_requests_only",
-                "never"
+                "never",
+                "exempt"
               ]
             },
             {
@@ -236209,6 +237379,42 @@
                               "isRequired": true
                             }
                           ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "object",
+                  "name": "copilot_code_review",
+                  "description": "<p>Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.</p>",
+                  "isRequired": [
+                    "type"
+                  ],
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "isRequired": true,
+                      "enum": [
+                        "copilot_code_review"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "parameters",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "boolean",
+                          "name": "review_draft_pull_requests",
+                          "description": "<p>Copilot automatically reviews draft pull requests before they are marked as ready for review.</p>"
+                        },
+                        {
+                          "type": "boolean",
+                          "name": "review_on_push",
+                          "description": "<p>Copilot automatically reviews each new push to the pull request.</p>"
                         }
                       ]
                     }
@@ -236372,10 +237578,11 @@
                 {
                   "type": "string",
                   "name": "bypass_mode",
-                  "description": "<p>When the specified actor can bypass the ruleset. <code>pull_request</code> means that an actor can only bypass rules on pull requests. <code>pull_request</code> is not applicable for the <code>DeployKey</code> actor type. Also, <code>pull_request</code> is only applicable to branch rulesets.</p>",
+                  "description": "<p>When the specified actor can bypass the ruleset. <code>pull_request</code> means that an actor can only bypass rules on pull requests. <code>pull_request</code> is not applicable for the <code>DeployKey</code> actor type. Also, <code>pull_request</code> is only applicable to branch rulesets. When <code>bypass_mode</code> is <code>exempt</code>, rules will not be run for that actor and a bypass audit entry will not be created.</p>",
                   "enum": [
                     "always",
-                    "pull_request"
+                    "pull_request",
+                    "exempt"
                   ],
                   "default": "always"
                 }
@@ -236388,7 +237595,8 @@
               "enum": [
                 "always",
                 "pull_requests_only",
-                "never"
+                "never",
+                "exempt"
               ]
             },
             {
@@ -237314,6 +238522,42 @@
                               "isRequired": true
                             }
                           ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "object",
+                  "name": "copilot_code_review",
+                  "description": "<p>Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.</p>",
+                  "isRequired": [
+                    "type"
+                  ],
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "isRequired": true,
+                      "enum": [
+                        "copilot_code_review"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "parameters",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "boolean",
+                          "name": "review_draft_pull_requests",
+                          "description": "<p>Copilot automatically reviews draft pull requests before they are marked as ready for review.</p>"
+                        },
+                        {
+                          "type": "boolean",
+                          "name": "review_on_push",
+                          "description": "<p>Copilot automatically reviews each new push to the pull request.</p>"
                         }
                       ]
                     }
@@ -237477,10 +238721,11 @@
                 {
                   "type": "string",
                   "name": "bypass_mode",
-                  "description": "<p>When the specified actor can bypass the ruleset. <code>pull_request</code> means that an actor can only bypass rules on pull requests. <code>pull_request</code> is not applicable for the <code>DeployKey</code> actor type. Also, <code>pull_request</code> is only applicable to branch rulesets.</p>",
+                  "description": "<p>When the specified actor can bypass the ruleset. <code>pull_request</code> means that an actor can only bypass rules on pull requests. <code>pull_request</code> is not applicable for the <code>DeployKey</code> actor type. Also, <code>pull_request</code> is only applicable to branch rulesets. When <code>bypass_mode</code> is <code>exempt</code>, rules will not be run for that actor and a bypass audit entry will not be created.</p>",
                   "enum": [
                     "always",
-                    "pull_request"
+                    "pull_request",
+                    "exempt"
                   ],
                   "default": "always"
                 }
@@ -237493,7 +238738,8 @@
               "enum": [
                 "always",
                 "pull_requests_only",
-                "never"
+                "never",
+                "exempt"
               ]
             },
             {
@@ -238419,6 +239665,42 @@
                               "isRequired": true
                             }
                           ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "object",
+                  "name": "copilot_code_review",
+                  "description": "<p>Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.</p>",
+                  "isRequired": [
+                    "type"
+                  ],
+                  "childParamsGroups": [
+                    {
+                      "type": "string",
+                      "name": "type",
+                      "description": "",
+                      "isRequired": true,
+                      "enum": [
+                        "copilot_code_review"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "parameters",
+                      "description": "",
+                      "childParamsGroups": [
+                        {
+                          "type": "boolean",
+                          "name": "review_draft_pull_requests",
+                          "description": "<p>Copilot automatically reviews draft pull requests before they are marked as ready for review.</p>"
+                        },
+                        {
+                          "type": "boolean",
+                          "name": "review_on_push",
+                          "description": "<p>Copilot automatically reviews each new push to the pull request.</p>"
                         }
                       ]
                     }
@@ -239501,6 +240783,42 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "copilot_code_review",
+                      "description": "<p>Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.</p>",
+                      "isRequired": [
+                        "type"
+                      ],
+                      "childParamsGroups": [
+                        {
+                          "type": "string",
+                          "name": "type",
+                          "description": "",
+                          "isRequired": true,
+                          "enum": [
+                            "copilot_code_review"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "parameters",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "boolean",
+                              "name": "review_draft_pull_requests",
+                              "description": "<p>Copilot automatically reviews draft pull requests before they are marked as ready for review.</p>"
+                            },
+                            {
+                              "type": "boolean",
+                              "name": "review_on_push",
+                              "description": "<p>Copilot automatically reviews each new push to the pull request.</p>"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "oneOfObject": true
@@ -240387,6 +241705,42 @@
                                   "isRequired": true
                                 }
                               ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "name": "copilot_code_review",
+                      "description": "<p>Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.</p>",
+                      "isRequired": [
+                        "type"
+                      ],
+                      "childParamsGroups": [
+                        {
+                          "type": "string",
+                          "name": "type",
+                          "description": "",
+                          "isRequired": true,
+                          "enum": [
+                            "copilot_code_review"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "parameters",
+                          "description": "",
+                          "childParamsGroups": [
+                            {
+                              "type": "boolean",
+                              "name": "review_draft_pull_requests",
+                              "description": "<p>Copilot automatically reviews draft pull requests before they are marked as ready for review.</p>"
+                            },
+                            {
+                              "type": "boolean",
+                              "name": "review_on_push",
+                              "description": "<p>Copilot automatically reviews each new push to the pull request.</p>"
                             }
                           ]
                         }
@@ -241282,6 +242636,42 @@
                                       "isRequired": true
                                     }
                                   ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "name": "copilot_code_review",
+                          "description": "<p>Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.</p>",
+                          "isRequired": [
+                            "type"
+                          ],
+                          "childParamsGroups": [
+                            {
+                              "type": "string",
+                              "name": "type",
+                              "description": "",
+                              "isRequired": true,
+                              "enum": [
+                                "copilot_code_review"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "name": "parameters",
+                              "description": "",
+                              "childParamsGroups": [
+                                {
+                                  "type": "boolean",
+                                  "name": "review_draft_pull_requests",
+                                  "description": "<p>Copilot automatically reviews draft pull requests before they are marked as ready for review.</p>"
+                                },
+                                {
+                                  "type": "boolean",
+                                  "name": "review_on_push",
+                                  "description": "<p>Copilot automatically reviews each new push to the pull request.</p>"
                                 }
                               ]
                             }
@@ -243037,6 +244427,141 @@
               "type": "boolean or null",
               "name": "multi_repo",
               "description": "<p>Whether the detected secret was found in multiple repositories in the same organization or business.</p>"
+            },
+            {
+              "type": "object",
+              "name": "assigned_to",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
             }
           ]
         },
@@ -243620,6 +245145,141 @@
               "type": "boolean or null",
               "name": "multi_repo",
               "description": "<p>Whether the detected secret was found in multiple repositories in the same organization or business.</p>"
+            },
+            {
+              "type": "object",
+              "name": "assigned_to",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
             }
           ]
         },
@@ -244203,6 +245863,141 @@
               "type": "boolean or null",
               "name": "multi_repo",
               "description": "<p>Whether the detected secret was found in multiple repositories in the same organization or business.</p>"
+            },
+            {
+              "type": "object",
+              "name": "assigned_to",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
             }
           ]
         },
@@ -244786,6 +246581,141 @@
               "type": "boolean or null",
               "name": "multi_repo",
               "description": "<p>Whether the detected secret was found in multiple repositories in the same organization or business.</p>"
+            },
+            {
+              "type": "object",
+              "name": "assigned_to",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
             }
           ]
         },
@@ -245369,6 +247299,141 @@
               "type": "boolean or null",
               "name": "multi_repo",
               "description": "<p>Whether the detected secret was found in multiple repositories in the same organization or business.</p>"
+            },
+            {
+              "type": "object",
+              "name": "assigned_to",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
             }
           ]
         },
@@ -245953,6 +248018,141 @@
               "type": "boolean or null",
               "name": "multi_repo",
               "description": "<p>Whether the detected secret was found in multiple repositories in the same organization or business.</p>"
+            },
+            {
+              "type": "object",
+              "name": "assigned_to",
+              "description": "<p>A GitHub user.</p>",
+              "childParamsGroups": [
+                {
+                  "type": "string or null",
+                  "name": "name",
+                  "description": ""
+                },
+                {
+                  "type": "string or null",
+                  "name": "email",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "login",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "integer",
+                  "name": "id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "node_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "avatar_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string or null",
+                  "name": "gravatar_id",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "html_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "followers_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "following_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "gists_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "subscriptions_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "organizations_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "repos_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "received_events_url",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "boolean",
+                  "name": "site_admin",
+                  "description": "",
+                  "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "starred_at",
+                  "description": ""
+                },
+                {
+                  "type": "string",
+                  "name": "user_view_type",
+                  "description": ""
+                }
+              ]
             }
           ]
         },
@@ -253304,7 +255504,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -253407,6 +255606,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -256159,7 +258363,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -256262,6 +258465,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -258260,7 +260468,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -258363,6 +260570,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -261115,7 +263327,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -261218,6 +263429,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -263216,7 +265432,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -263319,6 +265534,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -266071,7 +268291,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -266174,6 +268393,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -268172,7 +270396,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -268275,6 +270498,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -271027,7 +273255,6 @@
               "type": "string",
               "name": "author_association",
               "description": "<p>How the author is associated with the repository.</p>",
-              "isRequired": true,
               "enum": [
                 "COLLABORATOR",
                 "CONTRIBUTOR",
@@ -271130,6 +273357,11 @@
                   "isRequired": true
                 }
               ]
+            },
+            {
+              "type": "string or null",
+              "name": "parent_issue_url",
+              "description": "<p>URL to get the parent issue of this issue, if it is a sub-issue</p>"
             },
             {
               "type": "object",
@@ -271435,6 +273667,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -271476,6 +273728,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
@@ -271670,6 +273941,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -271711,6 +274002,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
@@ -271904,6 +274214,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -271945,6 +274275,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
@@ -272137,6 +274486,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -272178,6 +274547,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
@@ -272470,6 +274858,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -272511,6 +274919,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
@@ -272704,6 +275131,26 @@
                   "name": "url",
                   "description": "<p>URL for the team</p>",
                   "isRequired": true
+                },
+                {
+                  "type": "string",
+                  "name": "type",
+                  "description": "<p>The ownership type of the team</p>",
+                  "isRequired": true,
+                  "enum": [
+                    "enterprise",
+                    "organization"
+                  ]
+                },
+                {
+                  "type": "integer",
+                  "name": "organization_id",
+                  "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+                },
+                {
+                  "type": "integer",
+                  "name": "enterprise_id",
+                  "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
                 }
               ]
             },
@@ -272745,6 +275192,25 @@
               "type": "string",
               "name": "url",
               "description": "<p>URL for the team</p>"
+            },
+            {
+              "type": "string",
+              "name": "type",
+              "description": "<p>The ownership type of the team</p>",
+              "enum": [
+                "enterprise",
+                "organization"
+              ]
+            },
+            {
+              "type": "integer",
+              "name": "organization_id",
+              "description": "<p>Unique identifier of the organization to which this team belongs</p>"
+            },
+            {
+              "type": "integer",
+              "name": "enterprise_id",
+              "description": "<p>Unique identifier of the enterprise to which this team belongs</p>"
             }
           ]
         }
